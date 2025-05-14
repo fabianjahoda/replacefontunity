@@ -302,7 +302,7 @@ namespace Plugins
             var currentScene = EditorSceneManager.GetActiveScene().path;
             EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
 
-            var textComponents = Component.FindObjectsOfType<Text>();
+            var textComponents = Component.FindObjectsByType<Text>(FindObjectsSortMode.None);
 
             foreach (string scene in scenesPaths)
             {
